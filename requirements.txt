@@ -1,0 +1,6 @@
+elasticsearch
+pymongo
+requests
+gensim
+testfixtures
+statsmodels

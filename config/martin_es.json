@@ -1,0 +1,42 @@
+{
+    "host": "https://localhost:9200",
+    "auth": {
+        "ca_certs": "http_ca.crt",
+        "username": "elastic",
+        "password": "HL7dPnOcq-rU_qootXKg"
+    },
+
+    "indices": [
+        {
+            "index": "article",
+            "scheme":
+            {
+                "domain": {"type": "keyword"},
+                "url": {"type": "keyword"},
+                "title": {"type": "text"},
+                "description": {"type": "text"},
+                "content": {"type": "text"},
+                "image_urls": {"type": "keyword"},
+                "created_date":{"type": "keyword"}
+            },
+            "settings":
+            {
+                "number_of_shards": 20,
+                "number_of_replicas": 0,
+                "index": {
+                    "analysis": {
+                        "analyzer": {
+                            "smartcn_with_stop": {
+                                "tokenizer": "smartcn_tokenizer",
+                                "filter": [
+                                    "porter_stem",
+                                    "smartcn_stop"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

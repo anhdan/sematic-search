@@ -1,0 +1,17 @@
+{
+    "martin-elasticsearch"  : {
+        "host": "https://localhost:9200",
+        "type": "docker",
+        "container-name": "kib-01",
+        "username": "elastic",
+        "password": "9mMRv8-PhKwg3M9vbLAx"
+    },
+
+    "martin-kibana" : {
+        "host": "https://localhost:5601",
+        "type": "docker",
+        "container-name": "kib-01",
+        "username": "elastic",
+        "password": "9mMRv8-PhKwg3M9vbLAx"
+    }
+}
